@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import MonthYear from "./month-year";
 import WeekDate from "./week-date";
 import "./App.css";
