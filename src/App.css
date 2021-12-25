@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #28292b;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  color: #426696;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
-.App-header {
-  background-color: #282c34;
+h3 {
+  color: #426696;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+main {
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
+  /* background: linear-gradient(to right top, #64dfc9, #6cdbeb); */
+  background: linear-gradient(to right top, rgb(241, 244, 247), #f1f4f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass {
+  background: white;
+  height: 300px;
+  width: 50%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.25)
+  );
+  border-radius: 2rem;
+  z-index: 5;
+  backdrop-filter: blur(2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.circle1,
+.circle2 {
+  backdrop-filter: blur(9rem);
+  height: 40rem;
+  width: 40rem;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.circle1 {
+  background: radial-gradient(
+    circle farthest-side at center,
+    rgb(248, 218, 213),
+    rgba(241, 244, 247, 0)
+  );
+  top: 5%;
+  right: 10%;
+}
+
+.circle2 {
+  background: radial-gradient(
+    circle farthest-side at center,
+    rgb(210, 189, 243),
+    rgba(241, 244, 247, 0)
+  );
+  bottom: 5%;
+  left: 10%;
+}
+
+.dashboard {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+  text-align: center;
+  border-radius: 2rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+.link {
+  display: flex;
+  margin: 2rem 0rem;
+  padding: 1rem 5rem;
+  align-items: center;
+}
+
+.link h2 {
+  padding: 0rem 2rem;
+}
+
+.games {
+  flex: 2;
+}
+
+.pro {
+  background: linear-gradient(to right top, #64dfc9, #6cdbeb);
+  border-radius: 2rem;
   color: white;
+  padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.items {
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item {
+  height: 150px;
+  width: 75px;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 600;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px;
+}
+
+.item:hover {
+  background-color: #4894ff;
+  border-radius: 50px;
+  filter: drop-shadow(0px 6px 13px #4894ff);
+}
+
+.item-day {
+  color: #7c8ab7;
+}
+.item-date {
+  color: #28292b;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.item:hover .item-day,
+.item:hover .item-date {
+  color: white;
 }
