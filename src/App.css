@@ -22,10 +22,10 @@ h3 {
   font-weight: 600;
   opacity: 0.8;
 }
-
 main {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+  max-width: 100vw;
   /* background: linear-gradient(to right top, #64dfc9, #6cdbeb); */
   background: linear-gradient(to right top, rgb(241, 244, 247), #f1f4f7);
   display: flex;
@@ -34,9 +34,11 @@ main {
 }
 
 .glass {
+  margin: auto;
   background: white;
   height: 300px;
-  width: 50%;
+  max-width: 600px;
+  width: 90vw;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.3),
@@ -48,17 +50,18 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .circle1,
 .circle2 {
   backdrop-filter: blur(9rem);
-  height: 40rem;
-  width: 40rem;
-  position: absolute;
+  height: 100vw;
+  width: 100vw;
+  position: fixed;
   z-index: 2;
   border-radius: 50%;
+  overflow: auto;
 }
 
 .circle1 {
@@ -67,8 +70,8 @@ main {
     rgb(248, 218, 213),
     rgba(241, 244, 247, 0)
   );
-  top: 5%;
-  right: 10%;
+  top: 10%;
+  right: 25%;
 }
 
 .circle2 {
@@ -77,8 +80,8 @@ main {
     rgb(210, 189, 243),
     rgba(241, 244, 247, 0)
   );
-  bottom: 5%;
-  left: 10%;
+  bottom: 10%;
+  left: 25%;
 }
 
 .dashboard {
@@ -121,13 +124,15 @@ main {
 .items {
   display: flex;
   justify-content: space-between;
+
+  width: 100%;
 }
 
 .item {
-  height: 150px;
-  width: 75px;
+  height: 6rem;
+  width: calc(100% / 7);
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   flex-direction: column;
   justify-content: space-between;
@@ -137,7 +142,7 @@ main {
 
 .item:hover {
   background-color: #4894ff;
-  border-radius: 50px;
+  border-radius: 9px;
   filter: drop-shadow(0px 6px 13px #4894ff);
 }
 
@@ -147,7 +152,6 @@ main {
 .item-date {
   color: #28292b;
   font-weight: 700;
-  font-size: 2rem;
   text-align: left;
 }
 
